@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 3000px;
+  background-color: #ffc0cb;
+  margin: 0;
+}
+
+.scrollMe {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #ff0000;
+  top: 0;
+}
+
+.scrollMe h1 {
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 3000px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Flowers inside the progress bar (positioning): */
+
+.smallFlowersWrapper {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: -60px;
+  z-index: 3;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallFlowersWrapper svg {
+  height: 60px;
+  width: 60px;
+  fill: #ffc0cb;
+}
+
+/* Flowers inside the progress bar (animation): */
+
+@keyframes flowersChangeColorIn {
+  from {
+    fill: #ffc0cb;
+  }
+  to {
+    fill: #ff0000;
+  }
+}
+
+@keyframes flowersChangeColorOut {
+  from {
+    fill: #ff0000;
+  }
+
+  to {
+    fill: #ffc0cb;
+  }
+}
+
+.flowerChangeColorIn {
+  animation: flowersChangeColorIn 1500ms forwards;
+}
+
+.flowerChangeColorOut {
+  animation: flowersChangeColorOut 1500ms 1 forwards;
+}
+
+/* Progress bar: */
+
+.progressBarContainer {
+  width: 100%;
+  margin: 0px 20px 0px 20px;
+  height: 50px;
+  background-color: #f5f5dc;
+  position: sticky;
+  top: 200px;
+  border-radius: 8px;
+}
+
+.progressBar {
+  border-radius: 7px;
+  height: 100%;
+  background: green;
+  position: absolute;
+  top: 0;
+}
