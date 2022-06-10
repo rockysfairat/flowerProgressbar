@@ -15,6 +15,14 @@ window.addEventListener("scroll", (e) => {
   statBar[0].style.width = `${persentage}%`;
 });
 
+// "Scroll me" div must be hidden on scroll:
+
+let scrollMe = document.getElementsByClassName("scrollMe");
+window.addEventListener("scroll", (e) => {
+  scrollMe[0].classList.add("animateScrollMe");
+});
+console.log(scrollMe[0].classList);
+
 // Flowers animations:
 
 const flower01 = document.getElementsByClassName("smallFlower01");
@@ -27,7 +35,7 @@ window.addEventListener("scroll", changeColorsFlowers);
 
 function changeColorsFlowers() {
   let persentage = Math.floor(scrollPosition / 20);
-  console.log(flower01[0].classList);
+  // console.log(flower01[0].classList);
 
   // First flower:
 
